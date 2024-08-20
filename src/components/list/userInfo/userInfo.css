@@ -22,7 +22,9 @@
     gap: 20px;
 
     i{
-        cursor: pointer;
+      font-size: 1.5rem;
+      color: #FF375FFF;
+      cursor: pointer;
     }
 
   }

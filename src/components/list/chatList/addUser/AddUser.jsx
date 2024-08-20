@@ -5,7 +5,9 @@ import { db } from "../../../../lib/firebase"
 import { useState } from "react"
 import { useUserStore } from "../../../../lib/userStore"
 
-const AddUser = () => {
+const AddUser = (props) => {
+
+  const{setAddMode} = props
   const [user,setUser] = useState(null)
 
   const {currentUser} = useUserStore()
@@ -64,11 +66,10 @@ const AddUser = () => {
           updatedAt: Date.now(),
         })
       })
-
-      console.log(newChatRef.id)
     }catch(err){
       console.log(err)
     }
+    setAddMode(false)
   }
 
 

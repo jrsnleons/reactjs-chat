@@ -1,6 +1,7 @@
 import "./userInfo.css";
 import usrImage from "./../../../assets/avatar.png"
 import { useUserStore } from "../../../lib/userStore";
+import { auth } from "../../../lib/firebase";
 
 const UserInfo = () => {
   const {currentUser,} = useUserStore()
@@ -12,9 +13,7 @@ const UserInfo = () => {
         <h2>{currentUser.username}</h2>
       </div>
       <div className="icons">
-        <i className="fa-solid fa-ellipsis"></i>
-        <i className="fa-solid fa-video"></i>
-        <i className="fa-solid fa-pen-to-square"></i>
+        <i className="fa-solid fa-right-from-bracket" onClick={()=> auth.signOut()}></i>
       </div>
     </div>
   );
