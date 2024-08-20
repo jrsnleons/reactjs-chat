@@ -64,7 +64,7 @@ const ChatList = () => {
     }
   }
 
- const fileteredChats = chats.filter((c) => c.user.username.toLowerCase().includes(input.toLowerCase())) 
+  const fileteredChats = chats.filter((c) => c.user.username.toLowerCase().includes(input.toLowerCase())) 
 
   return (
     <div className="chatlist">
